@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
+import { BaitColors } from '../../components/baitColors';
 import { ProductsPreview } from '../products-preview';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -20,8 +21,13 @@ export class App extends Component {
 }
 
 const Home = () => (
-  <div>
-    <ProductsPreview />
-  </div>
+  <main className="homepage">
+    <div className="container">
+      <ProductsPreview />
+    </div>
+    <section className="baits-colors">
+      <BaitColors />
+    </section>
+  </main>
 );
 
