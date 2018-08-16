@@ -28,6 +28,9 @@ export class ProductsPreview extends Component {
                 <p className="bait-preview__price">
                   {item.price}
                 </p>
+                <p className="bait-preview__description">
+                  Активна, розмашиста гра з періодичними збоями.
+                </p>
               </div>
               <div 
                 className="bait-preview__image"

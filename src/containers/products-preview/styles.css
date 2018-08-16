@@ -9,27 +9,31 @@
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat; }
-    .bait-preview__image::before, .bait-preview__image::after {
-      content: '';
-      display: block;
-      width: 45%;
-      height: 45%;
-      position: absolute;
-      z-index: 2;
-      transition: .15s ease-in; }
     .bait-preview__image::before {
-      top: 0;
-      left: 0;
-      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3); }
-    .bait-preview__image::after {
-      bottom: 0;
-      right: 0;
-      box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.3); }
+      content: "";
+      box-shadow: 0 0 40px 0 #000;
+      position: absolute;
+      left: -25%;
+      z-index: 1;
+      width: 150%;
+      height: 20px;
+      background-color: var(--c1);
+      transform: rotate(-2deg); }
+    .bait-preview__image::before {
+      top: -10px;
+      border-bottom: 2px solid var(--c5); }
   .bait-preview__preview-info {
     text-align: right;
-    padding: 15px; }
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
   .bait-preview__name {
     margin: 0;
     font-size: 35px; }
   .bait-preview__price {
     margin: 0; }
+  .bait-preview__description {
+    width: 60%;
+    margin: 0;
+    font-size: 14px; }
