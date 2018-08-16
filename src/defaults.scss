@@ -1,3 +1,19 @@
+// grid
+$screen-xs: 576px;
+$screen-xs-max: $screen-xs - 1;
+$screen-sm: 768px;
+$screen-sm-max: $screen-sm - 1;
+$screen-md: 992px;
+$screen-md-max: $screen-md - 1;
+$screen-lg: 1200px;
+$screen-lg-max: $screen-lg - 1;
+
+$page-width: 1200px;
+
 .container{
-  max-width: 1200px;
+  max-width: $page-width;
+  margin: {
+    left: auto;
+    right: auto;
+  }
 }

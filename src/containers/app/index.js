@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
+import '../../defaults.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import { BaitColors } from '../../components/baitColors';
@@ -23,11 +24,13 @@ export class App extends Component {
 const Home = () => (
   <main className="homepage">
     <div className="container">
-      <ProductsPreview />
+      <section className="products-preview">
+        <ProductsPreview />
+      </section>
+      <section className="baits-colors">
+        <BaitColors />
+      </section>
     </div>
-    <section className="baits-colors">
-      <BaitColors />
-    </section>
   </main>
 );
 
