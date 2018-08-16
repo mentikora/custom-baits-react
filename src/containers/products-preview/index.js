@@ -10,7 +10,8 @@ const arr = [
     price: 75,
     status: true,
     weight: 2.2,
-    text: '',
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
     gallery: []
   }
 ]
@@ -29,7 +30,7 @@ export class ProductsPreview extends Component {
                   {item.price}
                 </p>
                 <p className="bait-preview__description">
-                  Активна, розмашиста гра з періодичними збоями.
+                  {item.previewText}
                 </p>
               </div>
               <div 
