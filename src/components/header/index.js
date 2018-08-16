@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles.css';
+import Logo from '../logo';
 
 export default () => {
-  return <header>
-    im header
+  return <header className="header">
+    <Logo />
   </header>
 }

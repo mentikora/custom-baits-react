@@ -1,0 +1,17 @@
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--secondary-font);
+  font-size: 60px;
+
+  // text "custom"
+  &__custom{
+    color: var(--c5);
+  }
+
+  // text "baits"
+  &__baits{
+  }
+}

@@ -1,0 +1,35 @@
+.bait-preview {
+  width: 30%;
+  margin: 0 auto;
+  box-shadow: -10px 10px 40px 0px var(--c2); }
+  .bait-preview__image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; }
+    .bait-preview__image::before, .bait-preview__image::after {
+      content: '';
+      display: block;
+      width: 45%;
+      height: 45%;
+      position: absolute;
+      z-index: 2;
+      transition: .15s ease-in; }
+    .bait-preview__image::before {
+      top: 0;
+      left: 0;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3); }
+    .bait-preview__image::after {
+      bottom: 0;
+      right: 0;
+      box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.3); }
+  .bait-preview__preview-info {
+    text-align: right;
+    padding: 15px; }
+  .bait-preview__name {
+    margin: 0;
+    font-size: 35px; }
+  .bait-preview__price {
+    margin: 0; }

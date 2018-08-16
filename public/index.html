@@ -6,24 +6,34 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <title>React App</title>
     <style>
       :root{
         --c1: #415d99;
-        --c2: #3148f7;
+        --c2: #31487f;
         --c3: #ffffff;
         --c4: #9ba9c2;
         --c5: #ffdb9f;
         --c6: #8b96ad;
         --c7: #d4d9e3;
+        --primary-font: 'Open Sans', sans-serif;
+        --secondary-font: 'Great Vibes', cursive;
         /* https://dribbble.com/shots/3767728-Music-Sea */
+      }
+      * {
+        box-sizing: border-box;
       }
       body{
         margin: 0;
         padding: 0;
-
+        
+        font-family: var(--primary-font);
+        font-weight: 300;
+        font-size: 18px;
+        color: var(--c3);
         background-color: var(--c1);
-        color: var(--c3)
       }
     </style>
   </head>
