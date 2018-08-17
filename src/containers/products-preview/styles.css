@@ -4,64 +4,54 @@
   margin-right: auto; }
 
 .bait-preview {
-  box-shadow: -10px 10px 40px 0px var(--c2); }
+  padding: 30px 20px;
+  box-shadow: -10px 10px 40px 0px var(--c2);
+  background: linear-gradient(170deg, var(--c1) 60%, var(--c2) 60%, var(--c2) 100%); }
   @media (max-width: 767px) {
     .bait-preview {
       width: 80%;
       margin: 0 auto; } }
   @media (min-width: 768px) {
     .bait-preview {
-      width: 50%; } }
+      width: 33%; } }
+  .bait-preview__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; }
   .bait-preview__image {
-    height: 250px;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
     background-size: cover;
     background-position: 50%;
-    background-repeat: no-repeat; }
-    .bait-preview__image::before {
+    background-repeat: no-repeat;
+    box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.3); }
+    .bait-preview__image::after {
       content: "";
-      box-shadow: 0 0 40px 0 #000;
-      position: absolute;
-      left: -25%;
-      z-index: 1;
-      width: 150%;
-      height: 20px;
-      background-color: var(--c1);
-      transform: rotate(-2deg); }
-    .bait-preview__image::before {
-      top: -10px;
-      border-bottom: 2px solid var(--c5); }
-  .bait-preview__preview-info {
-    text-align: right;
-    padding: 30px 15px;
-    display: flex;
-    width: 100%; }
-  .bait-preview__side {
-    display: flex;
-    flex-direction: column; }
-    .bait-preview__side--left {
-      flex-shrink: 0;
-      align-items: flex-start;
-      justify-content: center; }
-    .bait-preview__side--right {
-      align-items: flex-end; }
+      display: block;
+      padding-bottom: 110%; }
   .bait-preview__name {
     position: relative;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 35px; }
-    .bait-preview__name::after {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      position: absolute;
-      right: 0;
-      bottom: -8px;
-      z-index: 2;
-      background-color: var(--c5); }
-  .bait-preview__price span {
-    vertical-align: sub; }
+    margin: 0;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .bait-preview__price {
+    padding: 8px 25px;
+    margin-top: 20px;
+    color: var(--c5);
+    background-color: var(--c2);
+    font-weight: 400;
+    font-size: 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
   .bait-preview__description {
+    text-align: left;
+    margin: 15px 0 0;
     font-size: 14px; }

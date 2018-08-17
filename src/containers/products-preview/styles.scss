@@ -1,22 +1,38 @@
 @import '../../defaults.scss';
 
 .bait-preview{
+  padding: 30px 20px;
 
   box-shadow: -10px 10px 40px 0px var(--c2);
+
+  background: linear-gradient(170deg, var(--c1) 60%,var(--c2) 60%,var(--c2) 100%);
 
   @media(max-width: $screen-sm-max) {
     width: 80%;
     margin: 0 auto;
   }
   @media(min-width: $screen-sm){
-    width: 50%;
+    width: 33%;
+  }
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
   }
 
   // image
   &__image{
-    height: 250px;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
     
     background: {
       size: cover;
@@ -24,81 +40,48 @@
       repeat: no-repeat;
     }
 
-    &::before{
+    box-shadow: -5px 5px 10px 0px rgba(0,0,0, .3);
+
+    &::after{
       content: "";
-      box-shadow: 0 0 40px 0 #000;
-
-      position: absolute;
-      left: -25%; 
-      z-index: 1;
-
-      width: 150%;
-      height: 20px;
-
-      background-color: var(--c1);
-      transform: rotate(-2deg);
-    }
-    &::before{
-      top: -10px; 
-      border-bottom: 2px solid var(--c5);
-    }
-  }
-
-  &__preview-info{
-    text-align: right;
-    padding: 30px 15px;
-
-    display: flex;
-    width: 100%;
-  }
-
-  &__side{
-    display: flex;
-    flex-direction: column;
-
-    &--left{
-      flex-shrink: 0;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    &--right{
-      align-items: flex-end;
+      display: block;
+      padding-bottom: 110%;
     }
   }
 
   // title
   &__name{
     position: relative;
-    margin: {
-      top: 0;
-      bottom: 15px;
-    }
-    font-size: 35px;
+    margin: 0;
 
-    &::after{
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-
-      position: absolute;
-      right: 0; bottom: -8px;
-      z-index: 2;
-
-      background-color: var(--c5);
-    }
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   // price
   &__price{ 
-    span{
-      vertical-align: sub;
-    }
+    padding: 8px 25px;
+    margin-top: 20px;
+
+    color: var(--c5);
+    background-color: var(--c2);
+    font-weight: 400;
+    font-size: 25px;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 
   // description
   &__description{
+    text-align: left;
+    margin: 15px 0 0;
+
     font-size: 14px;
+  }
+
+  &__weight{
   }
 }
