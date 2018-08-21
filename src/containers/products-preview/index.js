@@ -48,7 +48,7 @@ const arr = [
 export class ProductsPreview extends Component {
   render() {
     return (
-      <section>
+      <div className="bait-preview-container">
         {
           arr.map( item => {
             return <div key={item.id} className="bait-preview">
@@ -75,7 +75,7 @@ export class ProductsPreview extends Component {
             </div>
           })
         }
-      </section>
+      </div>
     );
   }
 }
