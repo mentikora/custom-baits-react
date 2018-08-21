@@ -16,4 +16,11 @@ $page-width: 1200px;
     left: auto;
     right: auto;
   }
+
+  @media(max-width: 1240px){
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
 }

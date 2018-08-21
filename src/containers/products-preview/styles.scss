@@ -3,20 +3,7 @@
 .bait-preview-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-
-  max-width: 1200px;
-  margin: {
-    left: auto;
-    right: auto;
-  }
-
-  @media(max-width: 1240px){
-    padding: {
-      left: 20px;
-      right: 20px;
-    }
-  }
+  justify-content: center;  
 }
 
 .bait-preview{
@@ -24,9 +11,10 @@
   flex-grow: 0;
 
   padding: 30px 20px;
-  box-shadow: -10px 10px 40px 0px var(--c2);
+  border-radius: 6px;
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
 
-  background: linear-gradient(170deg, var(--c1) 60%,var(--c2) 60%,var(--c2) 100%);
+  background-color: var(--c2);
 
   @media(max-width: $screen-xs-max){
     flex-basis: 100%;
@@ -84,7 +72,7 @@
     &::after{
       content: "";
       display: block;
-      padding-bottom: 110%;
+      padding-bottom: 100%;
     }
   }
 
@@ -97,6 +85,11 @@
     font-size: 25px;
     font-weight: 500;
     text-transform: uppercase;
+
+    &::first-letter{
+      font-size: 35px;
+      color: var(--c5);
+    }
   }
 
   // price
@@ -111,14 +104,6 @@
 
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-  }
-
-  // description
-  &__description{
-    text-align: left;
-    margin: 15px 0 0;
-
-    font-size: 14px;
   }
 
   &__weight{

@@ -6,7 +6,27 @@ import image from './testimage.jpg';
 const arr = [
   {
     id: 1,
-    name: 'Matilda',
+    name: 'Nemo',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Ozzy',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Chili',
     price: 75,
     status: true,
     weight: 2.2,
@@ -26,7 +46,7 @@ const arr = [
   },
   {
     id: 1,
-    name: 'Matilda',
+    name: 'Candy',
     price: 75,
     status: true,
     weight: 2.2,
@@ -36,7 +56,57 @@ const arr = [
   },
   {
     id: 1,
-    name: 'Matilda',
+    name: 'Sonic',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Drift',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Craft',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Woodoo',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Sezam',
+    price: 75,
+    status: true,
+    weight: 2.2,
+    previewText: 'Активна, розмашиста гра з періодичними збоями.',
+    fullText: '',
+    gallery: []
+  },
+  {
+    id: 1,
+    name: 'Oscar',
     price: 75,
     status: true,
     weight: 2.2,
@@ -68,10 +138,6 @@ export class ProductsPreview extends Component {
                   &#8372;{item.price}
                 </p>
               </div>
-              <p className="bait-preview__description">
-                {item.previewText}
-              </p>
-              
             </div>
           })
         }
