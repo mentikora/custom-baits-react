@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './styles.css';
 import Slider from "react-slick";
 
-export class BaitColors extends Component {
+export class Feedbacks extends Component {
   render() {
     const settings = {
       dots: true,

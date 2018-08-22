@@ -3,8 +3,9 @@ import './styles.css';
 import '../../defaults.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import { BaitColors } from '../../components/baitColors';
 import { ProductsPreview } from '../products-preview';
+import { BaitColors } from '../../components/bait-colors'
+import { Feedbacks } from '../../components/feedbacks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export class App extends Component {
@@ -29,6 +30,9 @@ const Home = () => (
       </section>
       <section className="baits-colors">
         <BaitColors />
+      </section>
+      <section className="feedbacks">
+        <Feedbacks />
       </section>
     </div>
   </main>
