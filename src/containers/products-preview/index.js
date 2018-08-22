@@ -121,22 +121,17 @@ export class ProductsPreview extends Component {
       <div className="bait-preview-container">
         {
           arr.map( item => {
-            return <div key={item.id} className="bait-preview">
-              <div className="bait-preview__top">
-                <h2 className="bait-preview__name">
-                  {item.name}
-                </h2>
+            return <div key={item.id} className="bait-preview" style={{backgroundImage: `url(${image})`}}>
+              <p className="bait-preview__price">
+                &#8372;{item.price}
+              </p>
+              <div className="bait-preview__content">
                 <p className="bait-preview__weight">
                   {item.weight}g
                 </p>
-              </div>
-              <div 
-                className="bait-preview__image"
-                style={{backgroundImage: `url(${image})`}}
-              >
-                <p className="bait-preview__price">
-                  &#8372;{item.price}
-                </p>
+                <h2 className="bait-preview__name">
+                  {item.name}
+                </h2>
               </div>
             </div>
           })

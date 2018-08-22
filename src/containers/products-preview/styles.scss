@@ -10,11 +10,24 @@
   flex-shrink: 0;
   flex-grow: 0;
 
+  overflow: hidden;
+  position: relative;
   padding: 30px 20px;
   border-radius: 6px;
   box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
 
-  background-color: var(--c2);
+  text-align: left;
+  background: {
+    size: cover;
+    position: 50%;
+    repeat: no-repeat;
+  }
+
+  &::after{
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
 
   @media(max-width: $screen-xs-max){
     flex-basis: 100%;
@@ -42,38 +55,49 @@
     }
   }
 
-  &__top{
+  &__content{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 15px;
-  }
-
-  // image
-  &__image{
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 100%;
-
-    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+    padding: 24px 30px;
     
-    background: {
-      size: cover;
-      position: 50%;
-      repeat: no-repeat;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 2;
+
+    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, #3C444D 100%);
+  }
+  
+  // price
+  &__price{ 
+    position: absolute;
+    top: 30px; left: 0;
+    z-index: 3;
+
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    border: {
+      top-right-radius: 15px;
+      bottom-right-radius: 15px;
     }
 
-    box-shadow: -5px 5px 10px 0px rgba(0,0,0, .3);
+    text-align: center;
+    color: var(--c2);
+    font-weight: 400;
+    font-size: 14px;
+    background-color: var(--c3);
+  }
+  
+  // weight
+  &__weight{
+    margin-bottom: 5px;
 
-    &::after{
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
+    color: var(--c5);
+    font-size: 12px;
   }
 
   // title
@@ -81,31 +105,8 @@
     position: relative;
     margin: 0;
 
-    text-align: left;
-    font-size: 25px;
-    font-weight: 500;
-    text-transform: uppercase;
-
-    &::first-letter{
-      font-size: 35px;
-      color: var(--c5);
-    }
-  }
-
-  // price
-  &__price{ 
-    padding: 8px 25px;
-    margin-top: 20px;
-
-    color: var(--c5);
-    background-color: var(--c2);
+    font-size: 24px;
     font-weight: 400;
-    font-size: 25px;
-
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
   }
 
-  &__weight{
-  }
 }

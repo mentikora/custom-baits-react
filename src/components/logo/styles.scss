@@ -3,7 +3,9 @@
   align-items: center;
   justify-content: center;
 
-  font-size: 60px;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
 
   // text "custom"
   &__custom{
@@ -12,5 +14,6 @@
 
   // text "baits"
   &__baits{
+    
   }
 }
