@@ -1,138 +1,54 @@
 import React, { Component } from 'react';
 import './styles.css';
+import * as contentful from 'contentful';
 
 import image from './testimage.jpg';
 
-const arr = [
-  {
-    id: 1,
-    name: 'Nemo',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Ozzy',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Chili',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Matilda',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Candy',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Sonic',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Drift',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Craft',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Woodoo',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Sezam',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  },
-  {
-    id: 1,
-    name: 'Oscar',
-    price: 75,
-    status: true,
-    weight: 2.2,
-    previewText: 'Активна, розмашиста гра з періодичними збоями.',
-    fullText: '',
-    gallery: []
-  }
-]
+const client = contentful.createClient({
+  space: 'bxyzlpc4dqh9',
+  accessToken: '0d827e25ac1f623fe72bd333013ae6f4c36a2e81ba82cacb5f33f552480c93a1'
+});
+
 export class ProductsPreview extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
+  componentDidMount () {
+    client.getEntries({content_type: 'products'})
+      .then((response) => this.setState({
+        baits: response.items
+      }))
+      .catch(console.error)
+  }
+
   render() {
     return (
       <div className="bait-preview-container">
         {
-          arr.map( item => {
-            return <div key={item.id} className="bait-preview">
-              <div className="bait-preview__image" style={{backgroundImage: `url(${image})`}}>
-              </div>
+          this.state.baits && console.log(this.state.baits)
+        }
+        {
+          this.state.baits && this.state.baits.map( (item, key) => {
+            return <div key={key} className="bait-preview">
+              {
+                item.fields.imagePreview ? 
+                <div className="bait-preview__image" style={{backgroundImage: `url(${item.fields.imagePreview.fields.file.url})`}}>
+                </div> : 
+                <div className="bait-preview__image" style={{backgroundImage: `url(${image})`}}>
+                </div>
+                
+              }
               <p className="bait-preview__price">
-                &#8372;{item.price}
+                &#8372;{item.fields.price}
               </p>
               <div className="bait-preview__content">
                 <p className="bait-preview__weight">
-                  {item.weight}g
+                  {item.fields.weight}g
                 </p>
                 <h2 className="bait-preview__name">
-                  {item.name}
+                  {item.fields.name}
                 </h2>
               </div>
             </div>
