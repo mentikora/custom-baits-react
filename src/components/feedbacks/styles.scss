@@ -1,6 +1,44 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.bait-colors__slider{
+
+.slick-slide{
+  padding: 15px;
+
+  * {
+    outline: 0;
+  }
+
+  img{
+    display: inline-block;
+  }
+}
+
+.feedbacks{
+  padding: {
+    top: 30px;
+    bottom: 30px;
+  }
   
+  text-align: center;
+  background-color: var(--c2);
+
+  &__image{
+    max-width: 100px;
+    max-height: 100px;
+
+    border-radius: 6px;
+  }
+
+  &__username{
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__text{
+  }
 }
