@@ -1,9 +1,35 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1240px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+@media (max-width: 991px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 30px; } }
+
+@media (min-width: 992px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 60px; } }
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
   font-weight: 700;
   text-transform: uppercase; }
   .logo__custom {
     color: var(--c5); }
+  @media (max-width: 991px) {
+    .logo {
+      font-size: 35px; } }
+  @media (min-width: 992px) {
+    .logo {
+      font-size: 64px; } }

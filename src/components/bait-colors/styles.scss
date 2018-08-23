@@ -52,6 +52,10 @@
     max-width: 20%;
   }
 
+  &:last-child{
+    margin-bottom: 0;
+  }
+
   &::after{
     content: '';
     display: block;
@@ -75,9 +79,6 @@
   }
 
   &__name{
-    margin: 0;
-    font-weight: 400;
-    font-size: 18px;
   }
 
 }

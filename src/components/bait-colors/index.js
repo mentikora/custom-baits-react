@@ -59,9 +59,9 @@ export class BaitColors extends Component {
           colors.map((item, key) => (
             <div key={key} className="color-item" style={{backgroundImage: `url(${image})`}}>
               <div className="color-item__content">
-                <h2 className="color-item__name">
+                <p className="color-item__name">
                   {item.name}
-                </h2>
+                </p>
               </div>
             </div>
           ))

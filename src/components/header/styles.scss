@@ -1,6 +1,18 @@
+@import '../../defaults.scss';
+
 .header{
-  padding: {
-    top: 70px;
-    bottom: 70px;
+  
+
+  @media(max-width: $screen-md-max){
+    padding: {
+      top: 35px;
+      bottom: 35px;
+    }
+  }
+  @media(min-width: $screen-md){
+    padding: {
+      top: 70px;
+      bottom: 70px;
+    }
   }
 }

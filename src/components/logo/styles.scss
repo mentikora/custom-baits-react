@@ -1,9 +1,10 @@
+@import '../../defaults.scss';
+
 .logo{
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 64px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -15,5 +16,12 @@
   // text "baits"
   &__baits{
     
+  }
+
+  @media(max-width: $screen-md-max){
+    font-size: 35px;
+  }
+  @media(min-width: $screen-md){
+    font-size: 64px;
   }
 }

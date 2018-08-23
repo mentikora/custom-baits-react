@@ -39,7 +39,7 @@ export class Feedbacks extends Component {
       dots: false,
       arrows: false,
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 1,
       infinite: false,
       swipeToSlide: true
     };

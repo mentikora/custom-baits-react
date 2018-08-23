@@ -36,6 +36,10 @@
     repeat: no-repeat;
   }
 
+  &:last-child{
+    margin-bottom: 0;
+  }
+  
   &::after{
     content: '';
     display: block;

@@ -7,10 +7,17 @@
       padding-left: 20px;
       padding-right: 20px; } }
 
-.products-preview,
-.baits-colors,
-.feedbacks {
-  margin-bottom: 60px; }
+@media (max-width: 991px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 30px; } }
+
+@media (min-width: 992px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 60px; } }
 
 .bait-preview-container {
   display: flex;
@@ -37,6 +44,8 @@
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat; }
+  .bait-preview:last-child {
+    margin-bottom: 0; }
   .bait-preview::after {
     content: '';
     display: block;

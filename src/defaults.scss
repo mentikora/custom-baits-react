@@ -29,5 +29,11 @@ $page-width: 1200px;
 .products-preview,
 .baits-colors,
 .feedbacks{
-  margin-bottom: 60px; 
+  @media(max-width: $screen-md-max){
+    margin-bottom: 30px; 
+
+  }
+  @media(min-width: $screen-md){
+    margin-bottom: 60px; 
+  }
 }
