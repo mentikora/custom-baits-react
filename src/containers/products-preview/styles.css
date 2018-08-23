@@ -37,23 +37,15 @@
   flex-grow: 0;
   overflow: hidden;
   position: relative;
-  padding: 30px 20px;
   border-radius: 6px;
   box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat; }
-  .bait-preview:last-child {
-    margin-bottom: 0; }
-  .bait-preview::after {
-    content: '';
-    display: block;
-    padding-bottom: 100%; }
+  text-align: left; }
   @media (max-width: 575px) {
     .bait-preview {
       flex-basis: 100%;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+      .bait-preview:last-child {
+        margin-bottom: 0; } }
   @media (min-width: 576px) and (max-width: 991px) {
     .bait-preview {
       flex-basis: 45%;
@@ -68,18 +60,16 @@
       margin-left: 20px;
       margin-right: 20px;
       margin-bottom: 40px; } }
+  .bait-preview__image {
+    height: 165px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; }
   .bait-preview__content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    padding: 24px 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, rgba(60, 68, 77, 0.7) 100%); }
+    padding: 24px 30px; }
   .bait-preview__price {
     position: absolute;
     top: 30px;
@@ -91,10 +81,9 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     text-align: center;
-    color: var(--c2);
-    font-weight: 400;
+    color: var(--c3);
     font-size: 14px;
-    background-color: var(--c3); }
+    background: linear-gradient(90deg, var(--c4) 0%, var(--c5) 100%); }
   .bait-preview__weight {
     margin-bottom: 5px;
     color: var(--c5);

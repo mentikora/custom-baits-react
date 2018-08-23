@@ -121,7 +121,9 @@ export class ProductsPreview extends Component {
       <div className="bait-preview-container">
         {
           arr.map( item => {
-            return <div key={item.id} className="bait-preview" style={{backgroundImage: `url(${image})`}}>
+            return <div key={item.id} className="bait-preview">
+              <div className="bait-preview__image" style={{backgroundImage: `url(${image})`}}>
+              </div>
               <p className="bait-preview__price">
                 &#8372;{item.price}
               </p>
