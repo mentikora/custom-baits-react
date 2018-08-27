@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './styles.css';
 import { DataConsumer } from '../../context/context';
+import { Helmet } from "react-helmet";
 
 // const getBait = (baits, id) => {
 //   const bait = baits.find((b) => b.sys.id === id);
@@ -16,13 +17,6 @@ import { DataConsumer } from '../../context/context';
 // }
 
 class _ProductView extends Component {
-
-  // renderBait(bait) {
-  //   if (!bait) {
-  //     return null
-  //   }
-  //   return <div>{bait.name}, {bait.price}</div>
-  // }
 
   getBait(baits, id){
     const { history } = this.props;
@@ -51,10 +45,15 @@ class _ProductView extends Component {
           // }
           ({ baits, isLoading }) => {
             if (isLoading){
-              return `Spiner` 
+              return `Loading...` 
             }
             const bait = this.getBait(baits, id)
-            return <div>{bait.name}, {bait.price}</div>
+            return <div>
+              <Helmet>
+                <title>{bait.name} - Custom Baits</title>
+              </Helmet>
+              {bait.name}, {bait.price}
+            </div>
           }
         }
       </DataConsumer>

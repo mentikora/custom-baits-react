@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { DataProvider } from '../../context/context';
+import { Helmet } from "react-helmet";
 import './styles.css';
 import '../../defaults.css';
 import Header from '../../components/header';
@@ -14,6 +15,7 @@ export class App extends Component {
   render() {
     return (
       <DataProvider>
+        <Helmet><title>Custom Baits</title></Helmet>
         <Router>
           <div className="App">
             <Header />
