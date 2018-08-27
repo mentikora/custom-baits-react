@@ -52,6 +52,11 @@ class _ProductView extends Component {
             return <div className="product-view-wrapper">
               <Helmet>
                 <title>{bait.name} - Custom Baits</title>
+
+                {/* 
+                  @TODO: test this feature
+                */}
+                <meta property="og:image" content={bait.imagePreview.fields.file.url} />
               </Helmet>
               <div className="container">
                 <div className="product-view">

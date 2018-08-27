@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
-import image from './testimage.jpg';
+import image from './testimage.png';
 import { DataConsumer } from '../../context/context';
 import { Link } from 'react-router-dom';
 
