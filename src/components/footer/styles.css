@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1240px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.text-center {
+  text-align: center; }
+
+@media (max-width: 991px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 30px; } }
+
+@media (min-width: 992px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 60px; } }
+
+.footer {
+  margin-bottom: 30px; }
+  .footer__top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--c2); }
+  .footer__bottom {
+    padding: 15px;
+    background-color: rgba(60, 68, 77, 0.5); }

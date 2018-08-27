@@ -1,0 +1,7 @@
+.socials-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .socials-list a {
+    color: var(--c3);
+    text-decoration: none; }
