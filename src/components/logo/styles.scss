@@ -6,7 +6,10 @@
   justify-content: center;
 
   font-weight: 700;
-  text-transform: uppercase;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
 
   // text "custom"
   &__custom{
@@ -15,6 +18,6 @@
 
   // text "baits"
   &__baits{
-    
+    color: var(--c3);    
   }
 }
