@@ -7,17 +7,20 @@ import { ProductsPreview } from '../products-preview';
 import { BaitColors } from '../../components/bait-colors'
 import { Feedbacks } from '../../components/feedbacks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { DataProvider } from '../../context/context';
 
 export class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Header />
-          <Route exact path="/" component={Home} />
-          <Footer />
-        </div>
-      </Router>
+      <DataProvider>
+        <Router>
+          <div className="App">
+            <Header />
+            <Route exact path="/" component={Home} />
+            <Footer />
+          </div>
+        </Router>
+      </DataProvider>
     );
   }
 }
