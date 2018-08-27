@@ -18,9 +18,10 @@ export class DataProvider extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      baits: null,
-      colors: null,
-      feedbacks: null,
+      baits: [],
+      colors: [],
+      feedbacks: [],
+      isLoading: true
     }
   }
 
@@ -54,7 +55,7 @@ export class DataProvider extends Component {
         client.getEntries({content_type: 'feedbacks'}),      
       ]);
 
-      this.setState({ baits, colors, feedbacks });
+      this.setState({ baits, colors, feedbacks, isLoading: false });
     } catch (error) {
       console.error(error);      
     }

@@ -12,8 +12,8 @@ export class ProductsPreview extends Component {
           ({ baits }) => (
             <div className="bait-preview-container">
               {
-                baits && baits.map( (item, key) => {
-                  return <Link to={item.fields.name} key={key} className="bait-preview bait-preview--link">
+                baits && baits.map( item => {
+                  return <Link to={`/products/${item.sys.id}`} key={item.sys.id} className="bait-preview bait-preview--link">
                     {
                       item.fields.imagePreview ? 
                       <div className="bait-preview__image" style={{backgroundImage: `url(${item.fields.imagePreview.fields.file.url})`}}>

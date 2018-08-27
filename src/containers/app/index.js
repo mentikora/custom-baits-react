@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { DataProvider } from '../../context/context';
 import './styles.css';
 import '../../defaults.css';
 import Header from '../../components/header';
@@ -6,8 +8,7 @@ import Footer from '../../components/footer';
 import { ProductsPreview } from '../products-preview';
 import { BaitColors } from '../../components/bait-colors'
 import { Feedbacks } from '../../components/feedbacks';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { DataProvider } from '../../context/context';
+import { ProductView } from '../../components/product-view';
 
 export class App extends Component {
   render() {
@@ -17,6 +18,7 @@ export class App extends Component {
           <div className="App">
             <Header />
             <Route exact path="/" component={Home} />
+            <Route path="/products/:id" component={ProductView} />
             <Footer />
           </div>
         </Router>
