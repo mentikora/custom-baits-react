@@ -31,3 +31,11 @@
   .header {
     padding-top: 70px;
     padding-bottom: 70px; } }
+
+@media (max-width: 991px) {
+  .header .logo {
+    font-size: 35px; } }
+
+@media (min-width: 992px) {
+  .header .logo {
+    font-size: 64px; } }

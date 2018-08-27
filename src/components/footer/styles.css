@@ -23,11 +23,20 @@
     margin-bottom: 60px; } }
 
 .footer {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-align: center; }
+  .footer .logo {
+    margin-bottom: 15px; }
+    @media (max-width: 991px) {
+      .footer .logo {
+        font-size: 25px; } }
+    @media (min-width: 992px) {
+      .footer .logo {
+        font-size: 35px; } }
+  .footer__top, .footer__bottom {
+    padding: 30px 15px; }
   .footer__top {
-    padding-top: 30px;
-    padding-bottom: 30px;
     background-color: var(--c2); }
   .footer__bottom {
-    padding: 15px;
     background-color: rgba(60, 68, 77, 0.5); }

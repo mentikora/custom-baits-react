@@ -30,9 +30,3 @@
   text-transform: uppercase; }
   .logo__custom {
     color: var(--c5); }
-  @media (max-width: 991px) {
-    .logo {
-      font-size: 35px; } }
-  @media (min-width: 992px) {
-    .logo {
-      font-size: 64px; } }

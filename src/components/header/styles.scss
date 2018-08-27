@@ -1,7 +1,6 @@
 @import '../../defaults.scss';
 
 .header{
-  
 
   @media(max-width: $screen-md-max){
     padding: {
@@ -13,6 +12,15 @@
     padding: {
       top: 70px;
       bottom: 70px;
+    }
+  }
+
+  .logo{
+    @media(max-width: $screen-md-max){
+      font-size: 35px;
+    }
+    @media(min-width: $screen-md){
+      font-size: 64px;
     }
   }
 }

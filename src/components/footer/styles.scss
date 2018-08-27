@@ -3,18 +3,29 @@
 .footer{
   margin-bottom: 30px;
   
-  &__top{
-    padding: {
-      top: 30px;
-      bottom: 30px;
-    }
+  font-size: 14px;
+  text-align: center;
 
+  .logo{
+    margin-bottom: 15px;
+    
+    @media(max-width: $screen-md-max){
+      font-size: 25px;
+    }
+    @media(min-width: $screen-md){
+      font-size: 35px;
+    }
+  }
+  
+  &__top,
+  &__bottom{
+    padding: 30px 15px;
+  }
+  &__top{
     background-color: var(--c2);
   }
   
   &__bottom{
-    padding: 15px;
-
     // --c2
     background-color: rgba(60, 68, 77, .5);
   }
