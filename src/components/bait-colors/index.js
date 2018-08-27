@@ -52,18 +52,6 @@ const colors = [
 ]
 
 export class BaitColors extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
-
-  componentDidMount () {
-    client.getEntries({content_type: 'colors'})
-      .then((response) => this.setState({
-        baits: response.items
-      }))
-      .catch(console.error)
-  }
   render() {
     return(
       <div className="colors-wrapper">
