@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './styles.css';
 import { DataConsumer } from '../../context/context';
 import { Helmet } from "react-helmet";
+import {  MarkdownPreview  } from 'react-marked-markdown';
 
 // const getBait = (baits, id) => {
 //   const bait = baits.find((b) => b.sys.id === id);
@@ -48,11 +49,33 @@ class _ProductView extends Component {
               return `Loading...` 
             }
             const bait = this.getBait(baits, id)
-            return <div>
+            return <div className="product-view-wrapper">
               <Helmet>
                 <title>{bait.name} - Custom Baits</title>
               </Helmet>
-              {bait.name}, {bait.price}
+              <div className="container">
+                <div className="product-view">
+                  <div className="product-view__gallery">
+                    gallery
+                  </div>
+                  <h1 className="product-view__title">
+                    {bait.name} 
+                  </h1>
+                  <p className="product-view__price">
+                    &#8372;{bait.price}
+                  </p>
+                  <p className="product-view__weight">
+                    {bait.weight}g
+                  </p>
+                  <p className="product-view__price">
+                    {bait.price}
+                  </p>
+                  <p className="product-view__status">
+                    Avaible: {`${ bait.status }`}
+                  </p>
+                  <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
+                </div>
+              </div>
             </div>
           }
         }

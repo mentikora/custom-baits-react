@@ -53,12 +53,12 @@
         margin-bottom: 0; } }
   @media (min-width: 576px) and (max-width: 991px) {
     .color-item {
-      flex-basis: 30%;
-      max-width: 30%; } }
+      flex-basis: calc(30% - 10px);
+      max-width: calc(30% - 10px); } }
   @media (min-width: 992px) {
     .color-item {
-      flex-basis: 20%;
-      max-width: 20%; } }
+      flex-basis: calc(20% - 10px);
+      max-width: calc(20% - 10px); } }
   .color-item::after {
     content: '';
     display: block;
