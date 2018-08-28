@@ -1,2 +1,2 @@
-.product-view__text p:not(:last-child) {
+.product-view__text p {
   margin-bottom: 10px; }

@@ -17,6 +17,7 @@
         --c5: #F27A54;
         --c6: #6FCF97;
         --primary-font: 'Montserrat', sans-serif;
+        --bd-radius: 6px;
       }
       * {
         box-sizing: border-box;
@@ -34,6 +35,17 @@
       p{
         margin: 0;
       }
+      /* customize scrollbar */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: none;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--c5);
+        outline: 1px solid var(--c5);
+      } 
     </style>
   </head>
   <body>

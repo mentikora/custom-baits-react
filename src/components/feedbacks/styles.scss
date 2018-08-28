@@ -1,17 +1,6 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-
-.slick-slide{
-  padding: 15px;
-
-  * {
-    outline: 0;
-  }
-
-  img{
-    display: inline-block;
-  }
-}
+@import '../../defaults.scss';
 
 .feedbacks{
   padding: {
@@ -19,25 +8,117 @@
     bottom: 30px;
   }
   
-  text-align: center;
   background-color: var(--c2);
 
-  &__image{
-    max-width: 100px;
-    max-height: 100px;
-
-    border-radius: 6px;
-  }
-
-  &__username{
-    margin: {
-      top: 10px;
-      bottom: 10px;
+  // generated slick div
+  .slick-slide{
+    padding: 15px;
+  
+    * {
+      outline: 0;
     }
-    font-size: 18px;
-    font-weight: 400;
+
   }
 
+  // slick div's wrapper
+  .slick-track{
+    display: flex;
+    align-items: center;
+  }
+
+  // dots
+  .slick-dots{
+    @media(min-width: $screen-sm){
+      width: 20px;
+  
+      top: 50%;
+      right: 15px;
+      bottom: auto;
+    }
+
+    li{
+      margin: 2px 0;
+
+      @media(min-width: $screen-sm){
+        display: block;
+      }
+
+      &.slick-active button:before{
+        color: var(--c5);
+      }
+    }
+  }
+
+}
+
+// feedback item
+.feedback-item{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  $gray: #CBCFD4;
+
+  // header
+  &__header{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    &-leftside{
+      margin-right: 15px;
+    }
+  }
+
+  // image
+  &__image{
+    border-radius: var(--bd-radius);
+    max-width: 48px;
+    max-height: 48px;
+    
+    line-height: 0;
+  }
+
+  // date
+  &__date{
+    font-size: 10px;
+    color: $gray;
+  }
+
+  // username
+  &__username{
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--c3);
+  }
+
+  // user text
   &__text{
+    max-height: 150px;
+    overflow-y: scroll;
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray;
+    
+    p:not(:last-child){
+      margin-bottom: 10px;
+    }
+
+    @media(min-width: $screen-sm){
+      width: 70%;
+    }
+
+    a, b, strong {
+      color: var(--c5);
+    }
+    a{
+      text-decoration: none;
+    }
   }
 }

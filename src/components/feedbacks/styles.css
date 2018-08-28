@@ -1,23 +1,91 @@
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
-.slick-slide {
-  padding: 15px; }
-  .slick-slide * {
-    outline: 0; }
-  .slick-slide img {
-    display: inline-block; }
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1240px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.text-center {
+  text-align: center; }
+
+@media (max-width: 991px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 30px; } }
+
+@media (min-width: 992px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks {
+    margin-bottom: 60px; } }
 
 .feedbacks {
   padding-top: 30px;
   padding-bottom: 30px;
-  text-align: center;
   background-color: var(--c2); }
-  .feedbacks__image {
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 6px; }
-  .feedbacks__username {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 400; }
+  .feedbacks .slick-slide {
+    padding: 15px; }
+    .feedbacks .slick-slide * {
+      outline: 0; }
+  .feedbacks .slick-track {
+    display: flex;
+    align-items: center; }
+  @media (min-width: 768px) {
+    .feedbacks .slick-dots {
+      width: 20px;
+      top: 50%;
+      right: 15px;
+      bottom: auto; } }
+  .feedbacks .slick-dots li {
+    margin: 2px 0; }
+    @media (min-width: 768px) {
+      .feedbacks .slick-dots li {
+        display: block; } }
+    .feedbacks .slick-dots li.slick-active button:before {
+      color: var(--c5); }
+
+.feedback-item {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .feedback-item__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; }
+    .feedback-item__header-leftside {
+      margin-right: 15px; }
+  .feedback-item__image {
+    border-radius: var(--bd-radius);
+    max-width: 48px;
+    max-height: 48px;
+    line-height: 0; }
+  .feedback-item__date {
+    font-size: 10px;
+    color: #CBCFD4; }
+  .feedback-item__username {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--c3); }
+  .feedback-item__text {
+    max-height: 150px;
+    overflow-y: scroll;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: #CBCFD4; }
+    .feedback-item__text p:not(:last-child) {
+      margin-bottom: 10px; }
+    @media (min-width: 768px) {
+      .feedback-item__text {
+        width: 70%; } }
+    .feedback-item__text a, .feedback-item__text b, .feedback-item__text strong {
+      color: var(--c5); }
+    .feedback-item__text a {
+      text-decoration: none; }
