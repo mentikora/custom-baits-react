@@ -1,2 +1,43 @@
-.product-view__text p {
-  margin-bottom: 10px; }
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1240px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.text-center {
+  text-align: center; }
+
+@media (max-width: 991px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks,
+  .product-view {
+    margin-bottom: 30px; } }
+
+@media (min-width: 992px) {
+  .products-preview,
+  .baits-colors,
+  .feedbacks,
+  .product-view {
+    margin-bottom: 60px; } }
+
+.product-view {
+  padding: 15px;
+  background-color: var(--c2); }
+  .product-view__gallery * {
+    outline: 0; }
+  .product-view__slider-slide-image {
+    height: 500px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .product-view__title {
+    margin: 0;
+    font-weight: 400; }
+  .product-view__text p:not(:last-child) {
+    margin-bottom: 10px; }

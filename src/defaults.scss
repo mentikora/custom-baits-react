@@ -32,7 +32,8 @@ $page-width: 1200px;
 // section margins
 .products-preview,
 .baits-colors,
-.feedbacks{
+.feedbacks,
+.product-view{
   @media(max-width: $screen-md-max){
     margin-bottom: 30px; 
 

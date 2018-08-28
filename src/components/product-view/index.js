@@ -4,18 +4,7 @@ import './styles.css';
 import { DataConsumer } from '../../context/context';
 import { Helmet } from "react-helmet";
 import {  MarkdownPreview  } from 'react-marked-markdown';
-
-// const getBait = (baits, id) => {
-//   const bait = baits.find((b) => b.sys.id === id);
-
-//   if (bait) {
-//     return bait.fields
-//   }
-
-//   history.push('/');
-
-//   return {};
-// }
+import Slider from "react-slick";
 
 class _ProductView extends Component {
 
@@ -35,42 +24,53 @@ class _ProductView extends Component {
   render(){
     const { match: { params: { id } } } = this.props;
 
+    const settings = {
+      autoplay: false,
+      dots: false,
+      arrows: true,
+      speed: 500,
+      slidesToShow: 1,
+      infinite: false,
+      swipeToSlide: true,
+    };
+
     return(
       <DataConsumer>
         { 
-          // ({ baits, isLoading }) => {
-          //   if (isLoading){
-          //     return `Spiner` 
-          //   }
-          //   return this.renderBait(getBait(baits, id, history))
-          // }
           ({ baits, isLoading }) => {
             if (isLoading){
               return `Loading...` 
             }
             const bait = this.getBait(baits, id)
+
             return <div className="product-view-wrapper">
               <Helmet>
                 <title>{bait.name} - Custom Baits</title>
-
-                {/* 
-                  @TODO: test this feature
-                */}
                 <meta property="og:image" content={bait.imagePreview.fields.file.url} />
               </Helmet>
               <div className="container">
                 <div className="product-view">
+                  <header className="product-view__header">
+                    <h1 className="product-view__title">
+                      {bait.name} 
+                    </h1>
+                  </header>
                   <div className="product-view__gallery">
-                    gallery
+                    <Slider {...settings} className="product-view__slider">
+                      {
+                        bait && bait.gallery.map((item, key) => (
+                          <div key={key} className="product-view__slider-slide">
+                            <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
+                          </div>
+                        ))
+                      }
+                    </Slider>
                   </div>
-                  <h1 className="product-view__title">
-                    {bait.name} 
-                  </h1>
-                  <p className="product-view__price">
-                    &#8372;{bait.price}
-                  </p>
                   <p className="product-view__weight">
                     {bait.weight}g
+                  </p>
+                  <p className="product-view__price">
+                    &#8372;{bait.price}
                   </p>
                   <p className="product-view__price">
                     {bait.price}

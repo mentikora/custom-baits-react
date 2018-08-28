@@ -13,13 +13,15 @@
 @media (max-width: 991px) {
   .products-preview,
   .baits-colors,
-  .feedbacks {
+  .feedbacks,
+  .product-view {
     margin-bottom: 30px; } }
 
 @media (min-width: 992px) {
   .products-preview,
   .baits-colors,
-  .feedbacks {
+  .feedbacks,
+  .product-view {
     margin-bottom: 60px; } }
 
 .colors-wrapper {

@@ -1,8 +1,37 @@
-.product-view{
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import '../../defaults.scss';
 
+.product-view{
+  padding: 15px;
+
+  background-color: var(--c2);
+
+  &__header{
+  }
+
+  &__gallery{
+    * {
+      outline: 0;
+    }
+  }
+  &__slider-slide-image{
+    height: 500px;
+
+    background: {
+      position: 50%;
+      repeat: no-repeat;
+      size: cover;
+    }
+  }
+
+  &__title{
+    margin: 0;
+    font-weight: 400;
+  }
 
   &__text{
-    p{
+    p:not(:last-child){
       margin-bottom: 10px;
     }
   }
