@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { DataConsumer } from '../../context/context';
-import image from './test-color.jpeg';
 
 export class BaitColors extends Component {
   render() {
@@ -11,8 +10,11 @@ export class BaitColors extends Component {
           ({ colors }) => (
             <div className="colors-wrapper">
               {
+                console.log(colors)
+              }
+              {
                 colors && colors.map((item, key) => (
-                  <div key={key} className="color-item" style={{backgroundImage: `url(${image})`}}>
+                  <div key={key} className="color-item" style={{backgroundImage: `url(${item.fields.image.fields.file.url})`}}>
                     <div className="color-item__content">
                       <p className="color-item__name">
                         {item.fields.name}

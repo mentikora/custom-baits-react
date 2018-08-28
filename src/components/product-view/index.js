@@ -50,12 +50,7 @@ class _ProductView extends Component {
               </Helmet>
               <div className="container">
                 <div className="product-view">
-                  <header className="product-view__header">
-                    <h1 className="product-view__title">
-                      {bait.name} 
-                    </h1>
-                  </header>
-                  <div className="product-view__gallery">
+                  <aside className="product-view__gallery">
                     <Slider {...settings} className="product-view__slider">
                       {
                         bait && bait.gallery.map((item, key) => (
@@ -65,20 +60,25 @@ class _ProductView extends Component {
                         ))
                       }
                     </Slider>
-                  </div>
-                  <p className="product-view__weight">
-                    {bait.weight}g
-                  </p>
-                  <p className="product-view__price">
-                    &#8372;{bait.price}
-                  </p>
-                  <p className="product-view__price">
-                    {bait.price}
-                  </p>
-                  <p className="product-view__status">
-                    Avaible: {`${ bait.status }`}
-                  </p>
-                  <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
+                  </aside>
+                  <aside className="product-view__info">
+                    <h1 className="product-view__title">
+                      {bait.name} 
+                    </h1>
+                    <p className="product-view__weight">
+                      {bait.weight}g
+                    </p>
+                    <p className="product-view__price">
+                      &#8372;{bait.price}
+                    </p>
+                    <p className="product-view__price">
+                      {bait.price}
+                    </p>
+                    <p className="product-view__status">
+                      Avaible: {`${ bait.status }`}
+                    </p>
+                    <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
+                  </aside>
                 </div>
               </div>
             </div>
