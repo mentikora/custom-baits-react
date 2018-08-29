@@ -52,38 +52,48 @@ class _ProductView extends Component {
               <div className="container">
                 <div className="product-view">
                   <div className="product-view-row">
-                    <aside className="product-view__gallery">
-                      <Slider {...settings} className="product-view__slider">
+                    <aside className="product-view-side product-view__gallery">
+                      {/* <Slider {...settings} className="product-view__slider">
                         {
-                          bait && bait.gallery.map((item, key) => (
+                          bait.gallery && bait.gallery.map((item, key) => (
                             <div key={key} className="product-view__slider-slide">
                               <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
                             </div>
                           ))
                         }
-                      </Slider>
+                      </Slider> */}
+                      {
+                      bait.gallery && bait.gallery.map((item, key) => (
+                            <div key={key} className="product-view__slider-slide">
+                              <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
+                            </div>
+                          ))
+                        }
                     </aside>
-                    <aside className="product-view__info">
+                    <aside className="product-view-side product-view__info">
                       <h1 className="product-view__title">
-                        {bait.name} 
+                        {bait.name}
                       </h1>
-                      <p className="product-view__weight">
-                        {bait.weight}g
-                      </p>
                       <p className="product-view__price">
                         &#8372;{bait.price}
                       </p>
-                      <p className="product-view__price">
-                        {bait.price}
+                      <p className="product-view__weight">
+                        Вага: {bait.weight}g
                       </p>
                       <p className="product-view__status">
-                        Avaible: {`${ bait.status }`}
+                        Наявність: {`${ bait.status }`}
                       </p>
+                      <br/>
                       <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
+                      <BaitColors />  
                     </aside>
                   </div>
                   <div className="product-view-row">
-                    <BaitColors />  
+                    <div className="product-view-side">
+                    </div>
+                    <div className="product-view-side">
+                      Умови доставки & оплати
+                    </div>
                   </div>
                 </div>
               </div>

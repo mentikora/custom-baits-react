@@ -50,9 +50,7 @@
   @media (max-width: 575px) {
     .color-item {
       flex-basis: calc(50% - 10px);
-      max-width: calc(50% - 10px); }
-      .color-item:last-child {
-        margin-bottom: 0; } }
+      max-width: calc(50% - 10px); } }
   @media (min-width: 576px) and (max-width: 991px) {
     .color-item {
       flex-basis: calc(30% - 20px);
@@ -75,10 +73,5 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, rgba(60, 68, 77, 0.5) 100%); }
-    @media (max-width: 991px) {
-      .color-item__content {
-        padding: 12px 15px; } }
-    @media (min-width: 992px) {
-      .color-item__content {
-        padding: 24px 30px; } }
+    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, rgba(60, 68, 77, 0.5) 100%);
+    padding: 10%; }
