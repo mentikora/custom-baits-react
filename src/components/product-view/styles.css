@@ -27,8 +27,14 @@
     margin-bottom: 60px; } }
 
 .product-view {
-  padding: 15px;
-  background-color: var(--c2); }
+  padding: 15px; }
+  .product-view-row {
+    display: flex; }
+    .product-view-row .colors-wrapper {
+      width: 100%; }
+  .product-view__gallery, .product-view__info {
+    flex: 0 0 50%;
+    max-width: 50%; }
   .product-view__gallery * {
     outline: 0; }
   .product-view__slider-slide-image {
@@ -36,6 +42,8 @@
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover; }
+  .product-view__info {
+    padding: 15px 30px; }
   .product-view__title {
     margin: 0;
     font-weight: 400; }

@@ -5,6 +5,7 @@ import { DataConsumer } from '../../context/context';
 import { Helmet } from "react-helmet";
 import {  MarkdownPreview  } from 'react-marked-markdown';
 import Slider from "react-slick";
+import { BaitColors } from '../bait-colors';
 
 class _ProductView extends Component {
 
@@ -37,7 +38,7 @@ class _ProductView extends Component {
     return(
       <DataConsumer>
         { 
-          ({ baits, isLoading }) => {
+          ({ baits, colors, isLoading }) => {
             if (isLoading){
               return `Loading...` 
             }
@@ -50,35 +51,40 @@ class _ProductView extends Component {
               </Helmet>
               <div className="container">
                 <div className="product-view">
-                  <aside className="product-view__gallery">
-                    <Slider {...settings} className="product-view__slider">
-                      {
-                        bait && bait.gallery.map((item, key) => (
-                          <div key={key} className="product-view__slider-slide">
-                            <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
-                          </div>
-                        ))
-                      }
-                    </Slider>
-                  </aside>
-                  <aside className="product-view__info">
-                    <h1 className="product-view__title">
-                      {bait.name} 
-                    </h1>
-                    <p className="product-view__weight">
-                      {bait.weight}g
-                    </p>
-                    <p className="product-view__price">
-                      &#8372;{bait.price}
-                    </p>
-                    <p className="product-view__price">
-                      {bait.price}
-                    </p>
-                    <p className="product-view__status">
-                      Avaible: {`${ bait.status }`}
-                    </p>
-                    <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
-                  </aside>
+                  <div className="product-view-row">
+                    <aside className="product-view__gallery">
+                      <Slider {...settings} className="product-view__slider">
+                        {
+                          bait && bait.gallery.map((item, key) => (
+                            <div key={key} className="product-view__slider-slide">
+                              <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
+                            </div>
+                          ))
+                        }
+                      </Slider>
+                    </aside>
+                    <aside className="product-view__info">
+                      <h1 className="product-view__title">
+                        {bait.name} 
+                      </h1>
+                      <p className="product-view__weight">
+                        {bait.weight}g
+                      </p>
+                      <p className="product-view__price">
+                        &#8372;{bait.price}
+                      </p>
+                      <p className="product-view__price">
+                        {bait.price}
+                      </p>
+                      <p className="product-view__status">
+                        Avaible: {`${ bait.status }`}
+                      </p>
+                      <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
+                    </aside>
+                  </div>
+                  <div className="product-view-row">
+                    <BaitColors />  
+                  </div>
                 </div>
               </div>
             </div>

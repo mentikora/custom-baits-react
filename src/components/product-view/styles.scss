@@ -4,12 +4,24 @@
 
 .product-view{
   padding: 15px;
+  
+  // row
+  &-row{
+    display: flex;
 
-  background-color: var(--c2);
-
-  &__header{
+    // colors component
+    .colors-wrapper{
+      width: 100%;
+    }
   }
 
+  &__gallery,
+  &__info{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  // leftside
   &__gallery{
     * {
       outline: 0;
@@ -23,6 +35,11 @@
       repeat: no-repeat;
       size: cover;
     }
+  }
+
+  // rightside
+  &__info{
+    padding: 15px 30px;
   }
 
   &__title{
