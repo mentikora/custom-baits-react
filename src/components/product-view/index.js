@@ -4,8 +4,8 @@ import './styles.css';
 import { DataConsumer } from '../../context/context';
 import { Helmet } from "react-helmet";
 import {  MarkdownPreview  } from 'react-marked-markdown';
-import Slider from "react-slick";
 import { BaitColors } from '../bait-colors';
+import DeliveryPayment from '../delivery-payment-conditions';
 
 class _ProductView extends Component {
 
@@ -25,16 +25,6 @@ class _ProductView extends Component {
   render(){
     const { match: { params: { id } } } = this.props;
 
-    const settings = {
-      autoplay: false,
-      dots: false,
-      arrows: true,
-      speed: 500,
-      slidesToShow: 1,
-      infinite: false,
-      swipeToSlide: true,
-    };
-
     return(
       <DataConsumer>
         { 
@@ -53,22 +43,13 @@ class _ProductView extends Component {
                 <div className="product-view">
                   <div className="product-view-row">
                     <aside className="product-view-side product-view__gallery">
-                      {/* <Slider {...settings} className="product-view__slider">
-                        {
-                          bait.gallery && bait.gallery.map((item, key) => (
-                            <div key={key} className="product-view__slider-slide">
-                              <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
-                            </div>
-                          ))
-                        }
-                      </Slider> */}
                       {
-                      bait.gallery && bait.gallery.map((item, key) => (
-                            <div key={key} className="product-view__slider-slide">
-                              <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
-                            </div>
-                          ))
-                        }
+                        bait.gallery && bait.gallery.map((item, key) => (
+                          <div key={key} className="product-view__slider-slide">
+                            <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
+                          </div>
+                        ))
+                      }
                     </aside>
                     <aside className="product-view-side product-view__info">
                       <h1 className="product-view__title">
@@ -83,17 +64,12 @@ class _ProductView extends Component {
                       <p className="product-view__status">
                         Наявність: {`${ bait.status }`}
                       </p>
-                      <br/>
                       <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
                       <BaitColors />  
                     </aside>
                   </div>
                   <div className="product-view-row">
-                    <div className="product-view-side">
-                    </div>
-                    <div className="product-view-side">
-                      Умови доставки & оплати
-                    </div>
+                    <DeliveryPayment />
                   </div>
                 </div>
               </div>
