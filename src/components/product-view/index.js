@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import {  MarkdownPreview  } from 'react-marked-markdown';
 import { BaitColors } from '../bait-colors';
 import DeliveryPayment from '../delivery-payment-conditions';
+import { Preloader } from '../preloader';
 
 class _ProductView extends Component {
 
@@ -30,7 +31,9 @@ class _ProductView extends Component {
         { 
           ({ baits, colors, isLoading }) => {
             if (isLoading){
-              return `Loading...` 
+              return <div className="container text-center">
+                <Preloader />
+              </div>
             }
             const bait = this.getBait(baits, id)
 
