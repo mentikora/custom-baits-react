@@ -7,6 +7,7 @@ import {  MarkdownPreview  } from 'react-marked-markdown';
 import { BaitColors } from '../bait-colors';
 import DeliveryPayment from '../delivery-payment-conditions';
 import { Preloader } from '../preloader';
+import Slider from "react-slick";
 
 class _ProductView extends Component {
 
@@ -25,6 +26,16 @@ class _ProductView extends Component {
 
   render(){
     const { match: { params: { id } } } = this.props;
+
+    const settings = {
+      autoplay: false,
+      dots: true,
+      arrows: false,
+      speed: 500,
+      slidesToShow: 1,
+      infinite: false,
+      swipeToSlide: true,
+    };
 
     return(
       <DataConsumer>
@@ -46,6 +57,16 @@ class _ProductView extends Component {
                 <div className="product-view">
                   <div className="product-view-row">
                     <aside className="product-view-side product-view__gallery">
+                      <Slider {...settings} className="product-view-slider">
+                        {
+                          bait.gallery && bait.gallery.map((item, key) => (
+                            <div key={key} className="product-view__slider-slide">
+                              <div className="product-view__slider-slide-image" style={{backgroundImage: `url(${item.fields.file.url})`}}></div>
+                            </div>
+                          ))
+                        }
+                      </Slider>
+                      <div className="product-view-images">
                       {
                         bait.gallery && bait.gallery.map((item, key) => (
                           <div key={key} className="product-view__slider-slide">
@@ -53,6 +74,7 @@ class _ProductView extends Component {
                           </div>
                         ))
                       }
+                      </div>
                     </aside>
                     <aside className="product-view-side product-view__info">
                       <h1 className="product-view__title">
@@ -62,7 +84,7 @@ class _ProductView extends Component {
                         &#8372;{bait.price}
                       </p>
                       <p className="product-view__weight">
-                        Вага: {bait.weight}g
+                        Вага: {bait.weight}г
                       </p>
                       <p className="product-view__status">
                         Наявність: {`${ bait.status }`}

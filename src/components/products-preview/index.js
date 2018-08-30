@@ -26,7 +26,7 @@ export class ProductsPreview extends Component {
                     </p>
                     <div className="bait-preview__content">
                       <p className="bait-preview__weight">
-                        {item.fields.weight}g
+                        {item.fields.weight}г
                       </p>
                       <h2 className="bait-preview__name">
                         {item.fields.name}

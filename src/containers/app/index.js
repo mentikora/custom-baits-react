@@ -6,7 +6,7 @@ import './styles.css';
 import '../../defaults.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import { ProductsPreview } from '../products-preview';
+import { ProductsPreview } from '../../components/products-preview';
 import { BaitColors } from '../../components/bait-colors'
 import { Feedbacks } from '../../components/feedbacks';
 import { ProductView } from '../../components/product-view';
