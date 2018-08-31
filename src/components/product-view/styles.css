@@ -96,6 +96,11 @@
   margin-bottom: 15px;
   font-size: 25px; }
 
+.product-view__field span {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 600; }
+
 .product-view__text {
   margin-top: 25px;
   margin-bottom: 25px; }

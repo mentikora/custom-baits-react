@@ -83,11 +83,17 @@ class _ProductView extends Component {
                       <p className="product-view__price">
                         &#8372;{bait.price}
                       </p>
-                      <p className="product-view__weight">
-                        Вага: {bait.weight}г
+                      <p className="product-view__field">
+                        <span>
+                          Вага: 
+                        </span>
+                        {bait.weight}г
                       </p>
-                      <p className="product-view__status">
-                        Наявність: {`${ bait.status }`}
+                      <p className="product-view__field">
+                        <span>
+                          Наявність: 
+                        </span>
+                        {bait.status ? 'є в наявності' : 'немає в наявності' }
                       </p>
                       <MarkdownPreview className="product-view__text" value={ bait.textFull }/>
                       <BaitColors />  
