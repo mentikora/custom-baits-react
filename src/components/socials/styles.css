@@ -5,3 +5,6 @@
   .socials-list a {
     color: var(--c3);
     text-decoration: none; }
+  .socials-list svg {
+    width: 24px;
+    height: 24px; }
