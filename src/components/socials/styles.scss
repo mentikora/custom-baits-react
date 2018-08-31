@@ -3,11 +3,19 @@
   padding: 0;
   list-style: none;
 
+  display: flex;
+  justify-content: center;
+
+  li{
+    margin: {
+      left: 12px;
+      right: 12px;
+    }
+  }
   a{
     color: var(--c3);
     text-decoration: none;
   }
-
   svg{
     width: 24px;
     height: 24px;

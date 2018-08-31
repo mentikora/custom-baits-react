@@ -1,7 +1,12 @@
 .socials-list {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  display: flex;
+  justify-content: center; }
+  .socials-list li {
+    margin-left: 12px;
+    margin-right: 12px; }
   .socials-list a {
     color: var(--c3);
     text-decoration: none; }
