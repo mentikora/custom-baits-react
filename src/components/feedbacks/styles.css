@@ -32,8 +32,6 @@
   background-color: var(--c2); }
   .feedbacks .slick-slide {
     padding: 15px; }
-    .feedbacks .slick-slide * {
-      outline: 0; }
   .feedbacks .slick-track {
     display: flex;
     align-items: center; }
@@ -45,6 +43,8 @@
       bottom: auto; } }
   .feedbacks .slick-dots li {
     margin: 2px 0; }
+    .feedbacks .slick-dots li button {
+      outline: inherit; }
     @media (min-width: 768px) {
       .feedbacks .slick-dots li {
         display: block; } }

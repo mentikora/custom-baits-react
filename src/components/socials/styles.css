@@ -8,6 +8,7 @@
     margin-left: 12px;
     margin-right: 12px; }
   .socials-list a {
+    display: block;
     color: var(--c3);
     text-decoration: none; }
   .socials-list svg {

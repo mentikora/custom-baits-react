@@ -25,9 +25,7 @@
     margin-bottom: 60px; } }
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none; }

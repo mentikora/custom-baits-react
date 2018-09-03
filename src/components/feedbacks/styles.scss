@@ -13,11 +13,6 @@
   // generated slick div
   .slick-slide{
     padding: 15px;
-  
-    * {
-      outline: 0;
-    }
-
   }
 
   // slick div's wrapper
@@ -38,6 +33,10 @@
 
     li{
       margin: 2px 0;
+
+      button{
+        outline: inherit;
+      }
 
       @media(min-width: $screen-sm){
         display: block;

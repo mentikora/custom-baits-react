@@ -8,10 +8,7 @@ export class BaitColors extends Component {
       <DataConsumer>
         {
           ({ colors }) => (
-            <div className="colors-wrapper">
-              {
-                console.log(colors)
-              }
+            <div className="colors-wrapper" tabIndex="0">
               {
                 colors && colors.map((item, key) => (
                   <div key={key} className="color-item" style={{backgroundImage: `url(${item.fields.image.fields.file.url})`}}>
